@@ -10,8 +10,8 @@ export default function Footer() {
             <p className="text-gray-600">Philosophie als Lebenskunst</p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
-            <p className="text-gray-600">E-Mail: kontakt@nachgespuert.de</p>
+            {/* <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
+            <p className="text-gray-600">E-Mail: kontakt@nachgespürt.de</p> */}
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Rechtliches</h3>

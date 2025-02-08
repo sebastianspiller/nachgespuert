@@ -62,12 +62,12 @@ export default function QuoteSlider() {
   }, []);
 
   return (
-    <div className="min-h-[200px] flex items-center justify-center bg-pastel-blue/30 rounded-lg p-8">
+    <div className="min-h-[100px] flex items-center justify-center bg-pastel-blue/30 rounded-lg p-1">
       <div
         className={`text-center transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}
       >
         <p className="text-xl md:text-2xl italic mb-4 text-gray-700">
-          „{quotes[currentQuote].text}"
+          &quot;{quotes[currentQuote].text}&quot;
         </p>
         <p className="text-gray-600">— {quotes[currentQuote].author}</p>
       </div>
