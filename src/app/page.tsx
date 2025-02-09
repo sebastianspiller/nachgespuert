@@ -181,7 +181,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="kontakt" className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-16">
+      {/* Philosophische Urwolke Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="prose">
+              <h2 className="text-3xl font-bold mb-8 text-gray-800">
+                Die Philosophische Urwolke: Wo Struktur auf Freiheit trifft
+              </h2>
+              <p className="text-gray-600 text-lg mb-6">
+                Unser Ansatz verbindet die Freiheit des philosophischen Dialogs
+                mit einer behutsamen Struktur, die Assoziationen und
+                Verbindungen schafft. Wie eine Urwolke, die sich stetig wandelt
+                und doch ihre Form bewahrt, entwickeln sich unsere Gespräche.
+              </p>
+              <p className="text-gray-600 text-lg mb-6">
+                Wir beginnen mit einem vorbereiteten Thema als Ausgangspunkt. Im
+                Laufe des Gesprächs entstehen neue Perspektiven und
+                Querverbindungen. Am Ende jeder Sitzung kristallisieren sich
+                Fragen für den Alltag heraus und es öffnen sich Türen zu neuen
+                Themen, die wir in den folgenden Treffen vertiefen können.
+              </p>
+              <p className="text-gray-600 text-lg">
+                Der Begriff der "Urwolke", inspiriert von einem Düsseldorfer
+                Künstler, versinnbildlicht dabei perfekt die Dynamik und
+                schöpferische Kraft unserer philosophischen Gespräche:
+                Strukturiert und doch frei, geplant und dennoch offen für das
+                Unerwartete.
+              </p>
+            </div>
+            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/philosophische-urwolke.webp"
+                alt="Die Philosophische Urwolke"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="kontakt"
+        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-16 bg-secondary"
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
             Warum kann Philosophieren etwas für Sie sein?
