@@ -203,11 +203,11 @@ export default function Home() {
                 Themen, die wir in den folgenden Treffen vertiefen können.
               </p>
               <p className="text-gray-600 text-lg">
-                Der Begriff der "Urwolke", inspiriert von einem Düsseldorfer
-                Künstler, versinnbildlicht dabei perfekt die Dynamik und
-                schöpferische Kraft unserer philosophischen Gespräche:
-                Strukturiert und doch frei, geplant und dennoch offen für das
-                Unerwartete.
+                Der Begriff der &quot;Urwolke&quot;, inspiriert von einem
+                Düsseldorfer Künstler, versinnbildlicht dabei perfekt die
+                Dynamik und schöpferische Kraft unserer philosophischen
+                Gespräche: Strukturiert und doch frei, geplant und dennoch offen
+                für das Unerwartete.
               </p>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
