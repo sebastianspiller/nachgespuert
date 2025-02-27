@@ -57,7 +57,7 @@ export default async function BlogPostPage(props: { params: Params }) {
       </header>
       <article className="container mx-auto px-4 max-w-3xl">
         <div className="mb-8">
-          <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-300 mb-4">
+          <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <time dateTime={post.date}>
               {format(new Date(post.date), "MMMM d, yyyy")}
             </time>
@@ -68,9 +68,7 @@ export default async function BlogPostPage(props: { params: Params }) {
           </div>
 
           <h1 className="text-4xl font-bold mb-4"></h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
-            {post.excerpt}
-          </p>
+          <p className="text-xl text-gray-600">{post.excerpt}</p>
         </div>
 
         <div className="prose-custom text-justify">

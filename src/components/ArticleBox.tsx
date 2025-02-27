@@ -6,7 +6,7 @@ export default function ArticleBox({ post }: { post: BlogPost }) {
   return (
     <article
       key={post.slug}
-      className="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow"
+      className="bg-white rounded-lg p-8 my-4 hover:shadow-lg transition-shadow"
     >
       <div className="flex flex-wrap items-center gap-4 mb-4">
         <span className="text-primary text-sm font-medium">
@@ -20,7 +20,7 @@ export default function ArticleBox({ post }: { post: BlogPost }) {
             {tag}
           </span>
         ))}
-        <div className="text-sm text-gray-600 dark:text-gray-300 ml-auto">
+        <div className="text-sm text-gray-600 ml-auto">
           {format(new Date(post.date), "MMMM d, yyyy")} · {post.readingTime}
         </div>
       </div>
@@ -31,7 +31,7 @@ export default function ArticleBox({ post }: { post: BlogPost }) {
         </h2>
       </Link>
 
-      <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
+      <p className="text-gray-600 mb-4">{post.excerpt}</p>
 
       <Link
         href={`/blog/${post.slug}`}
