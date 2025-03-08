@@ -57,6 +57,11 @@ const components = {
       {props.children}
     </p>
   ),
+  a: (props: { children: React.ReactNode }) => (
+    <a {...props} className="text-blue-500 hover:underline">
+      {props.children}
+    </a>
+  ),
 };
 
 export function CustomMDX(props: {
