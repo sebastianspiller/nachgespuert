@@ -6,7 +6,7 @@ export default function ArticleBox({ post }: { post: BlogPost }) {
   return (
     <article
       key={post.slug}
-      className="bg-white rounded-lg p-8 my-4 hover:shadow-lg transition-shadow"
+      className="bg-card text-card-foreground border border-border rounded-lg p-8 my-4 hover:shadow-md transition-shadow"
     >
       <div className="flex flex-wrap items-center gap-4 mb-4">
         <span className="text-primary text-sm font-medium">
@@ -15,27 +15,29 @@ export default function ArticleBox({ post }: { post: BlogPost }) {
         {post.tags?.map((tag) => (
           <span
             key={tag}
-            className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium"
+            className="px-2 py-1 bg-muted text-foreground/70 rounded-full text-xs font-medium"
           >
             {tag}
           </span>
         ))}
-        <div className="text-sm text-gray-600 ml-auto">
+        <div className="text-sm text-foreground/70 dark:text-foreground/80 ml-auto">
           {format(new Date(post.date), "MMMM d, yyyy")} · {post.readingTime}
         </div>
       </div>
 
       <Link href={`/blog/${post.slug}`}>
-        <h2 className="text-2xl font-bold mb-3 hover:text-primary transition-colors">
+        <h2 className="text-2xl font-serif font-semibold mb-3 hover:text-primary transition-colors">
           {post.title}
         </h2>
       </Link>
 
-      <p className="text-gray-600 mb-4">{post.excerpt}</p>
+      <p className="text-foreground/85 dark:text-foreground mb-4">
+        {post.excerpt}
+      </p>
 
       <Link
         href={`/blog/${post.slug}`}
-        className="text-primary hover:text-secondary font-medium inline-flex items-center gap-2"
+        className="text-link hover:underline underline-offset-4 font-medium inline-flex items-center gap-2"
       >
         Artikel lesen
         <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">

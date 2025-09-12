@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import QuoteSlider from "@/components/QuoteSlider";
-import ScrollArrow from "@/components/ScrollArrow";
 import CallToAction from "@/components/CallToAction";
 import ArticleBox from "@/components/ArticleBox";
 import { BlogPost } from "@/types/blog";
@@ -22,27 +21,24 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
           </p>
 
           {/* Hero Image */}
-          <div className="relative w-1/4 max-w-3xl mx-auto mb-2 rounded-lg overflow-hidden shadow-lg">
+          <div className="relative w-1/2 max-w-3xl mx-auto mb-2 rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/lebenskunst.webp"
-              alt="Philosophie als Lebenskunst"
-              width={1200}
-              height={675}
+              src="/images/barn-swallow.webp"
+              alt="Quelle: pixabay.com/de/photos/rauchschwalbe-wildvogel-v%C3%B6gel-9798461"
+              width={1147}
+              height={835}
               className="w-full h-auto"
               priority
             />
           </div>
 
-          <div>
-            <QuoteSlider />
-          </div>
-          <ScrollArrow />
+          <QuoteSlider />
           <CallToAction />
         </div>
       </section>
 
       {/* Blog Section */}
-      <section className="py-16 bg-secondary">
+      <section className="py-8 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
             Blog
@@ -159,14 +155,14 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       {/* Kurs Section */}
       <section
         id="kurs"
-        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary scroll-mt-16"
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary text-foreground scroll-mt-16"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+          <h2 className="text-3xl font-serif font-semibold mb-8 text-center text-foreground">
             Der Kurs
           </h2>
           <div className="prose mx-auto">
-            <p className="text-gray-600 text-lg">
+            <p className="text-foreground/90 dark:text-foreground text-lg">
               Unser Philosophiekurs verbindet traditionelle philosophische
               Konzepte mit modernen Lebensfragen. Mit Fragen aus dem Alltag
               erkunden wir gemeinsam, wie philosophische Einsichten unser Leben
@@ -174,7 +170,7 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
               <br />
               <br />
               Der Kurs besteht aus 10 Abenden, Donnerstags von 20:10 Uhr bis
-              21:40 Uhr. Los geht es am 20. Februar 2025. Anmelden können Sie
+              21:40 Uhr. Los geht es am 18. September 2025. Anmelden können Sie
               sich auf den Seiten der VHS Düsseldorf:
             </p>
           </div>
@@ -187,10 +183,10 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
       >
         <div className="w-full mx-auto text-center">
           <a
-            href="https://vhs.duesseldorf.de/programm/politik-gesellschaft-umwelt/kurs/Philosophie-als-Lebenskunst/F620002"
+            href="https://vhs.duesseldorf.de/programm/politik-gesellschaft-umwelt/kurs/Philosophie-als-Lebenskunst/G620002"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-pastel-blue px-8 py-3 rounded-full text-lg font-medium hover:bg-pastel-blue/80 transition-colors text-gray-700"
+            className="inline-block bg-pastel-blue px-8 py-3 rounded-full text-lg font-medium hover:bg-pastel-blue/80 transition-colors text-foreground"
           >
             Webseite der VHS Düsseldorf
           </a>
@@ -203,13 +199,12 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="prose">
               <h2 className="text-3xl font-bold mb-8 text-gray-800">
-                Die Philosophische Urwolke: Wo Struktur auf Freiheit trifft
+                Was den Kurs ausmacht
               </h2>
               <p className="text-gray-600 text-lg mb-6">
                 Unser Ansatz verbindet die Freiheit des philosophischen Dialogs
                 mit einer behutsamen Struktur, die Assoziationen und
-                Verbindungen schafft. Wie eine Urwolke, die sich stetig wandelt
-                und doch ihre Form bewahrt, entwickeln sich unsere Gespräche.
+                Verbindungen schafft.
               </p>
               <p className="text-gray-600 text-lg mb-6">
                 Wir beginnen mit einem vorbereiteten Thema als Ausgangspunkt. Im
@@ -219,17 +214,14 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
                 Themen, die wir in den folgenden Treffen vertiefen können.
               </p>
               <p className="text-gray-600 text-lg">
-                Der Begriff der &quot;Urwolke&quot;, inspiriert von einem
-                Düsseldorfer Künstler, versinnbildlicht dabei perfekt die
-                Dynamik und schöpferische Kraft unserer philosophischen
-                Gespräche: Strukturiert und doch frei, geplant und dennoch offen
-                für das Unerwartete.
+                Wir lassen jede Perspektive ihren Raum und ermöglichen eine
+                offene und rücksichtsvolle Diskussionskultur.
               </p>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/philosophische-urwolke.webp"
-                alt="Die Philosophische Urwolke"
+                src="/images/bird-bath.jpg"
+                alt="Quelle: pixabay.com/de/photos/vogeltr%C3%A4nke-spritzen-vogel-in-bad-5290285/"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -241,14 +233,14 @@ export default function PageClient({ posts }: { posts: BlogPost[] }) {
 
       <section
         id="kontakt"
-        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-16 bg-secondary"
+        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-16 bg-secondary text-foreground"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+          <h2 className="text-3xl font-serif font-semibold mb-8 text-center text-foreground">
             Warum kann Philosophieren etwas für Sie sein?
           </h2>
           <div className="prose mx-auto text-center">
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-foreground/90 dark:text-foreground text-lg mb-4">
               Wir betrachten Philosophieren als eine Lebensweise mit dem
               Fragezeichen: Dabei geht es darum, mit Neugierde und Offenheit
               stets dem nachzugehen, wie wir Menschen in der Welt leben.

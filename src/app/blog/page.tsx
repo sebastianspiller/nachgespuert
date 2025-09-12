@@ -20,7 +20,7 @@ export default function BlogPage() {
           {/* Hero Image */}
           <div className="relative w-1/4 max-w-3xl mx-auto mb-2 rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/lebenskunst.webp"
+              src="/images/barn-swallow.webp"
               alt="Philosophie als Lebenskunst"
               width={1200}
               height={675}

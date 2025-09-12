@@ -3,31 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #343a40;
-  --primary: #6c757d;
-  --secondary: #e9ecef;
-  --accent: #adb5bd;
-  --pastel-blue: #d7e3fc;
-  --pastel-green: #d7e9d8;
-  --pastel-yellow: #fff3bf;
+  /* Base - light (cool/blueish) */
+  --background: #f6f9ff;
+  --foreground: #0f172a; /* slate-900 */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #dbe3f4;
+  --muted: #eef2ff; /* indigo-50 */
+  --muted-foreground: #475569; /* slate-600 */
+
+  /* Brand accents - blue leaning */
+  --primary: #1f3a5f; /* deep desaturated blue */
+  --secondary: #a5b4fc; /* indigo-300 */
+  --accent: #597aa8; /* cornflower-ish */
+  --link: #3b82f6; /* blue-500 */
+  --ring: #93c5fd; /* blue-300 */
+
+  /* Pastels used in UI flourishes */
+  --pastel-blue: #dbeafe; /* blue-100 */
+  --pastel-green: #e0f2fe; /* sky-100 (cool) */
+  --pastel-yellow: #eaf2ff; /* very pale blue */
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+.dark {
+  /* Base - dark (cool/blueish) */
+  --background: #0b1020; /* deep navy */
+  --foreground: #f1f5ff; /* brighter cool off-white */
+  --card: #0e152a; /* dark indigo-navy */
+  --card-foreground: #f1f5ff;
+  --border: #1f2a44;
+  --muted: #121a33;
+  --muted-foreground: #a5b4cf;
+
+  /* Brand accents - dark shift */
+  --primary: #c7d2fe; /* indigo-200 */
+  --secondary: #475569; /* slate-600 */
+  --accent: #9bb7ff; /* light cornflower */
+  --link: #93c5fd; /* blue-300 */
+  --ring: #93c5fd;
+
+  --pastel-blue: #1b2a4a;
+  --pastel-green: #14233f;
+  --pastel-yellow: #1a2748;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1,
+    "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .prose {
   max-width: 65ch;
   color: var(--foreground);
+}
+
+/* Base typography rhythm */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-family: var(--font-serif);
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border-color: var(--border);
 }
 
 .quote-fade {
@@ -52,7 +110,8 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
